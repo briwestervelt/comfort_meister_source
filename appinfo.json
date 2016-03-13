@@ -1,0 +1,30 @@
+{
+    "appKeys": {
+        "description": 2,
+        "fetch": 1,
+        "id": 3,
+        "qrcode": 0
+    },
+    "capabilities": [
+        "configurable"
+    ],
+    "companyName": "briwestervelt@gmail.com",
+    "enableMultiJS": true,
+    "longName": "Comfort-Meister 2.0",
+    "projectType": "native",
+    "resources": {
+        "media": []
+    },
+    "sdkVersion": "3",
+    "shortName": "Comfort-Meister 2.0",
+    "targetPlatforms": [
+        "aplite",
+        "basalt",
+        "chalk"
+    ],
+    "uuid": "197da7b7-4ffb-472d-8d53-010ad22db547",
+    "versionLabel": "1.0",
+    "watchapp": {
+        "watchface": false
+    }
+}
