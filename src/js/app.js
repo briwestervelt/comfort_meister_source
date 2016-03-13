@@ -33,8 +33,41 @@ function generateCode() {
     else
       toencode = "MECARD:N:"+namework+";ADR:"+addresswork+";TEL:"+phonenumberwork+";EMAIL:"+emailwork+";URL:"+url+";;";
 */
+  var tempInsert;
+  var celsiusInsert;
+  var lightInsert;
   
-  toencode = temperature + " " + celsius + " " + lightLevel;
+  if (temperature < 10){
+    tempInsert = "00" + temperature;
+  }
+  else if (temperature < 100){
+    tempInsert = "0" + temperature;
+  }
+  else if (temperature < 1000){
+    tempInsert = temperature;
+  }
+  else{
+    tempInsert = "000";
+  }
+  
+  if (celsius === true){
+    celsiusInsert = "1";
+  }
+  else{
+    celsiusInsert = "0";
+  }
+  
+  if (lightLevel < 10){
+    lightInsert = "00" + lightLevel;
+  }
+  else if (lightLevel < 100){
+    lightInsert = "0" + lightLevel;
+  }
+  else{
+    lightInsert = lightLevel;
+  }
+    toencode = tempInsert + celsiusInsert + lightInsert;
+  
   //toencode = toencode.substring(0,130);
   if(toencode.length>=232){
     toencode = "Warning: Text is truncated, limit is 230 chars...";
